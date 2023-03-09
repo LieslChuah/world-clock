@@ -58,8 +58,8 @@ function updateCity(event) {
           <div class="time">${cityTz.format("h:mm:ss")}<small> ${cityTz.format(
     "A"
   )}</small></div>
-        </div>  
-        <a href="/">All cities</a>`;
+        </div>
+`;
   setTimeout(() => {
     updateCity(event);
   }, 1000);

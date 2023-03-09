@@ -1,6 +1,10 @@
 body {
   font-family: sans-serif;
-  background-color: antiquewhite;
+  background: linear-gradient(
+    115.7deg,
+    rgb(3, 79, 135) 6.2%,
+    rgb(0, 184, 214) 112.9%
+  );
 }
 
 .container {
@@ -57,5 +61,11 @@ hr {
 
 footer {
   text-align: center;
-  margin: 10px auto;
+
+  margin: 10px 0 30px;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 92);
 }
