@@ -1,4 +1,18 @@
 function updateTime() {
+  let sydney = document.querySelector("#sydney");
+  if (sydney) {
+    let sydneyDateElement = sydney.querySelector(".date");
+    let sydneyTimeElement = sydney.querySelector(".time");
+    let sydneyTimezone = "Australia/Sydney";
+
+    sydneyDateElement.innerHTML = moment()
+      .tz(sydneyTimezone)
+      .format("MMMM Do YYYY");
+    sydneyTimeElement.innerHTML = moment()
+      .tz(sydneyTimezone)
+      .format("h:mm:ss [<small>] A[</small>]");
+  }
+
   let london = document.querySelector("#london");
   if (london) {
     let londonDateElement = london.querySelector(".date");
@@ -44,7 +58,8 @@ function updateCity(event) {
           <div class="time">${cityTz.format("h:mm:ss")}<small> ${cityTz.format(
     "A"
   )}</small></div>
-        </div>`;
+        </div>  
+        <a href="/">All cities</a>`;
 }
 
 updateTime();
