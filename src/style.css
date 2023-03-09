@@ -61,11 +61,15 @@ hr {
 
 footer {
   text-align: center;
-
-  margin: 10px 0 30px;
+  margin-bottom: 50px;
 }
 
 a {
   text-decoration: none;
   color: rgb(0, 0, 92);
+}
+
+#refresh {
+  font-size: 13px;
+  margin-top: 15px;
 }
