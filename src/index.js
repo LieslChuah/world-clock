@@ -28,26 +28,27 @@ function updateTime() {
   }
 }
 
-function updateSelectedCity(event) {
-  if (event.target.value.length > 0) {
-    let cityTimezone = event.target.value;
-    let cityTz = moment().tz(cityTimezone);
-    let cityName = cityTimezone.replace("_", " ").split("/")[1];
-    let citiesElement = document.querySelector("#cities");
-    citiesElement.innerHTML = `<div class="city">
+function updateCity(event) {
+  let cityTimezone = event.target.value;
+  if (cityTimezone === "current") {
+    cityTimezone = moment.tz.guess();
+  }
+  let cityName = cityTimezone.replace("_", " ").split("/")[1];
+  let cityTz = moment().tz(cityTimezone);
+  let citiesElement = document.querySelector("#cities");
+  citiesElement.innerHTML = `<div class="city">
           <div>
             <h2>${cityName}</h2>
             <div class="date">${cityTz.format("MMMM Do YYYY")}</div>
           </div>
           <div class="time">${cityTz.format("h:mm:ss")}<small> ${cityTz.format(
-      "A"
-    )}</small></div>
+    "A"
+  )}</small></div>
         </div>`;
-  }
 }
 
 updateTime();
-//setInterval(updateTime, 1000);
+setInterval(updateTime, 1000);
 
 let selectedCity = document.querySelector("#city");
-selectedCity.addEventListener("change", updateSelectedCity);
+selectedCity.addEventListener("change", updateCity);
