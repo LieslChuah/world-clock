@@ -63,7 +63,7 @@ function updateCity(event) {
   setTimeout(() => {
     updateCity(event);
   }, 1000);
-  if (cityTimezone === "") {
+  if (cityTimezone === "refresh") {
     window.location.reload();
   }
 }
