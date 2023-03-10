@@ -62,11 +62,12 @@ function updateCity(event) {
 `;
   setTimeout(() => {
     updateCity(event);
+    updateTime();
   }, 1000);
+
   if (cityTimezone === "refresh") {
     window.location.reload();
   }
-  updateTime();
 }
 
 updateTime();
