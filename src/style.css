@@ -1,10 +1,8 @@
 body {
   font-family: sans-serif;
-  background: radial-gradient(
-    592px at 48.2% 50%,
-    rgba(255, 255, 249, 0.6) 0%,
-    rgb(160, 199, 254) 74.6%
-  );
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/070/816/original/globe.jpg?1678426867");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -61,12 +59,12 @@ hr {
 
 footer {
   text-align: center;
+  color: rgb(114, 114, 255);
   margin-bottom: 50px;
 }
 
 a {
-  text-decoration: none;
-  color: rgb(0, 0, 160);
+  color: rgb(69, 69, 149);
 }
 
 #refresh {

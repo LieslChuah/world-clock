@@ -1,15 +1,15 @@
 function updateTime() {
-  let sydney = document.querySelector("#sydney");
-  if (sydney) {
-    let sydneyDateElement = sydney.querySelector(".date");
-    let sydneyTimeElement = sydney.querySelector(".time");
-    let sydneyTimezone = "Australia/Sydney";
+  let darwin = document.querySelector("#darwin");
+  if (darwin) {
+    let darwinDateElement = darwin.querySelector(".date");
+    let darwinTimeElement = darwin.querySelector(".time");
+    let darwinTimezone = "Australia/Darwin";
 
-    sydneyDateElement.innerHTML = moment()
-      .tz(sydneyTimezone)
+    darwinDateElement.innerHTML = moment()
+      .tz(darwinTimezone)
       .format("MMMM Do YYYY");
-    sydneyTimeElement.innerHTML = moment()
-      .tz(sydneyTimezone)
+    darwinTimeElement.innerHTML = moment()
+      .tz(darwinTimezone)
       .format("h:mm:ss [<small>] A[</small>]");
   }
 
